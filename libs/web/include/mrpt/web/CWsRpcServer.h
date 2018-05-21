@@ -1,9 +1,7 @@
 
 #include "CWebSocket.h"
 
-class CWsRpcServer
+namespace dev
 {
-public:
-	CWsRpcServer(CWebSocket &&ws) : m_ws(ws)
-
+	using CWsRpcServer = CWebSocketServer;
 }

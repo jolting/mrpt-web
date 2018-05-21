@@ -14,10 +14,13 @@ add_executable(mrpt-ws-rpc
 
 
 target_link_libraries(mrpt-ws-rpc
+PUBLIC
 ${CMAKE_THREAD_LIBS_INIT}
 mrpt-web
 libjson-rpc-cpp::server
-Boost::system)
+Boost::system
+OpenSSL::SSL
+OpenSSL::Crypto)
 
 include_directories(${RPC_SPEC_INCLUDE_DIR})
 
